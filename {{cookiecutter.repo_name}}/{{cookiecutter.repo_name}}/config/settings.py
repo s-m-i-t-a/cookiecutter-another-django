@@ -100,7 +100,7 @@ class Common(Configuration):
         join(BASE_DIR, 'fixtures'),
     )
     ########## END FIXTURE CONFIGURATION
-    
+
     ########## EMAIL CONFIGURATION
     EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
     ########## END EMAIL CONFIGURATION
@@ -124,9 +124,9 @@ class Common(Configuration):
     # Do this here because thanks to django-pylibmc-sasl and pylibmc memcacheify is painful to install on windows.
     # memcacheify is what's used in Production
     CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': ''
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': ''
         }
     }
     ########## END CACHING
@@ -173,9 +173,9 @@ class Common(Configuration):
     )
 
     TEMPLATE_LOADERS = (
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-        )
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )
 
     # See: http://django-crispy-forms.readthedocs.org/en/latest/install.html#template-packs
     CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -350,8 +350,7 @@ class Production(Common):
     # AWS cache settings, don't change unless you know what you're doing:
     AWS_EXPIREY = 60 * 60 * 24 * 7
     AWS_HEADERS = {
-        'Cache-Control': 'max-age=%d, s-maxage=%d, must-revalidate' % (AWS_EXPIREY,
-            AWS_EXPIREY)
+        'Cache-Control': 'max-age=%d, s-maxage=%d, must-revalidate' % (AWS_EXPIREY, AWS_EXPIREY)
     }
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
@@ -360,7 +359,7 @@ class Production(Common):
 
     ########## EMAIL
     DEFAULT_FROM_EMAIL = values.Value(
-            '{{cookiecutter.project_name}} <{{cookiecutter.project_name}}-noreply@{{cookiecutter.domain_name}}>')
+        '{{cookiecutter.project_name}} <{{cookiecutter.project_name}}-noreply@{{cookiecutter.domain_name}}>')
     EMAIL_HOST = values.Value('smtp.sendgrid.com')
     EMAIL_HOST_PASSWORD = values.SecretValue(environ_prefix="", environ_name="SENDGRID_PASSWORD")
     EMAIL_HOST_USER = values.SecretValue(environ_prefix="", environ_name="SENDGRID_USERNAME")
@@ -387,4 +386,3 @@ class Production(Common):
     ########## END CACHING
 
     ########## Your production stuff: Below this line define 3rd party libary settings
-

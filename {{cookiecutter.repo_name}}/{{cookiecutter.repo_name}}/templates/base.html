@@ -25,9 +25,11 @@
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endblock %}
 
+    {% comment %}
     {% block angular %}
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     {% endblock %}
+    {% endcomment %}
 
   </head>
 
@@ -58,7 +60,7 @@
       {% endblock content %}
 
     </div> <!-- /container -->
-    
+
     {% block modal %}{% endblock modal %}
 
     <!-- Le javascript

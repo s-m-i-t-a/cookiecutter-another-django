@@ -2,3 +2,19 @@
 -r base.txt
 coverage==3.6
 django-discover-runner==0.4
+django-coverage==1.2.2
+django-nose==1.1
+behave==1.2.3
+nose==1.3.0
+pep8==1.4.5
+pylint==0.27.0
+flake8
+pyflakes
+mccabe
+should-dsl==2.1.2
+selenium
+splinter==0.5.4
+mock==1.0.1
+factory_boy==2.2.1
+django-pyvows==0.6.2
+pyVows==2.0.4
