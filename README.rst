@@ -8,7 +8,7 @@ A cookiecutter_ template for Django.
 Features
 ---------
 
-* Django 1.5
+* Django 1.6
 * Twitter Bootstrap 3
 * Registration via django-allauth
 * User avatars via django-avatar
