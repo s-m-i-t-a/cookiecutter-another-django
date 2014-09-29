@@ -15,6 +15,7 @@ Features
 * Procfile for deploying to Heroku
 * Heroku optimized requirements
 * Basic caching setup
+* Use pytest
 
 Constraints
 -----------
@@ -35,7 +36,7 @@ First, get cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://jsmitka@bitbucket.org/jsmitka/cookiecutter-another-django.git
+    $ cookiecutter https://github.com/s-m-i-t-a/cookiecutter-another-django.git
 
 You'll be prompted for some questions, answer them, then it will create a Django project for you.
 
