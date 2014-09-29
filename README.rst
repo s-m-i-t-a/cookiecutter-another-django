@@ -1,6 +1,10 @@
 cookiecutter-another-django
 ===========================
 
+.. image:: https://requires.io/github/s-m-i-t-a/cookiecutter-another-django/requirements.svg?branch=master
+    :target: https://requires.io/github/s-m-i-t-a/cookiecutter-another-django/requirements/?branch=master
+    :alt: Requirements Status
+
 A cookiecutter_ template for Django.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
