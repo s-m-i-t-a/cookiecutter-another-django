@@ -1,5 +1,5 @@
-cookiecutter-django
-=======================
+cookiecutter-another-django
+===========================
 
 A cookiecutter_ template for Django.
 
