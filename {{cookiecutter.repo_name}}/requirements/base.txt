@@ -1,5 +1,5 @@
 # Django
-Django==1.6.2
+Django==1.7
 
 # Configuration
 django-configurations==0.8
